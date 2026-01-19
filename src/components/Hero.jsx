@@ -1,5 +1,4 @@
 import React from "react";
-import DashboardMock from "./DashboardMock";
 import FeatureGrid from "./FeatureGrid";
 
 function Hero() {
@@ -41,11 +40,6 @@ function Hero() {
               Ver casos de estudio
             </a>
           </div>
-        </div>
-
-        {/* Dashboard/App Mockup - CENTRAL */}
-        <div className="mb-20">
-          <DashboardMock />
         </div>
 
         {/* Features Grid - Bottom */}

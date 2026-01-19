@@ -1,6 +1,7 @@
 import React from "react";
 import Nav from "./components/Nav";
 import Hero from "./components/Hero";
+import Experience from "./components/Experience";
 import MethodCards from "./components/MethodCards";
 import Solutions from "./components/Solutions";
 import Services from "./components/Services";
@@ -15,6 +16,7 @@ function App() {
       <Nav nav={nav} />
       <main className="pt-24">
         <Hero />
+        <Experience />
         <MethodCards methodCards={methodCards} />
         <Solutions solutions={solutions} />
         <Services services={services} />
