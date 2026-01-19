@@ -10,7 +10,7 @@ function Solutions({ solutions }) {
           <div className="mb-3 text-xs font-semibold tracking-widest text-white/60">
             NUESTRAS SOLUCIONES INTEGRADAS
           </div>
-          <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
+          <h2 className="gradient-text text-3xl font-semibold tracking-tight md:text-4xl">
             Arquitecturas listas para crecer
           </h2>
           <p className="mt-4 text-base leading-relaxed text-white/70 md:text-lg">
@@ -29,7 +29,7 @@ function Solutions({ solutions }) {
                   {s.tech && (
                     <div className="mt-4 flex flex-wrap gap-2">
                       {s.tech.split(", ").map((tech) => (
-                        <span key={tech} className="inline-block px-2 py-1 text-xs bg-white/10 text-white/60 rounded-lg">
+                        <span key={tech} className="inline-block px-2 py-1 text-xs bg-gradient-to-r from-white/15 to-white/5 text-white/70 rounded-lg border border-white/10">
                           {tech}
                         </span>
                       ))}
@@ -41,7 +41,7 @@ function Solutions({ solutions }) {
           ))}
         </div>
 
-        <div className="mt-8 rounded-2xl border border-white/10 bg-white/5 p-6">
+        <div className="mt-8 rounded-2xl border border-white/10 gradient-card p-6">
           <div className="text-sm font-semibold">Nota</div>
           <p className="mt-2 text-sm leading-relaxed text-white/70">
             Cuando trabajo consultoría para plataformas de suscripción, mi enfoque es estratégico y tecnológico:

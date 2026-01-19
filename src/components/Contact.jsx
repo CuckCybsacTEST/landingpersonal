@@ -27,7 +27,7 @@ function Contact() {
     <Section id="contacto">
       <div className="mx-auto max-w-6xl px-4 py-16 md:px-6">
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
+          <h2 className="gradient-text text-3xl font-semibold tracking-tight md:text-4xl">
             ¿Listo para hacer crecer tu negocio?
           </h2>
           <p className="mt-4 text-base leading-relaxed text-white/70 md:text-lg">
@@ -43,10 +43,10 @@ function Contact() {
                 Respondo en máximo 24 horas. Elige tu canal favorito.
               </p>
               <div className="mt-5 flex flex-col gap-2">
-                <a href="https://wa.me/1234567890" className="rounded-2xl bg-green-500 px-5 py-3 text-sm font-semibold text-white hover:bg-green-600 transition-colors duration-200 text-center">
+                <a href="https://wa.me/1234567890" className="rounded-2xl bg-gradient-to-r from-green-500 to-green-600 px-5 py-3 text-sm font-semibold text-white hover:shadow-lg hover:shadow-green-500/20 transition-all duration-200 text-center">
                   💬 WhatsApp
                 </a>
-                <button className="rounded-2xl border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold hover:bg-white/10 transition-colors duration-200">
+                <button className="rounded-2xl gradient-button-secondary border border-white/15 px-5 py-3 text-sm font-semibold text-white transition-all duration-200">
                   📅 Agendar Llamada
                 </button>
               </div>
@@ -63,7 +63,7 @@ function Contact() {
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full rounded-xl border border-white/10 bg-black/40 px-4 py-3 text-sm text-white/85 outline-none placeholder:text-white/30 focus:border-white/25 focus:bg-black/60 transition-colors duration-200" 
+                      className="w-full rounded-xl border border-white/10 bg-gradient-to-r from-black/40 to-black/20 px-4 py-3 text-sm text-white/85 outline-none placeholder:text-white/30 focus:border-white/25 focus:from-black/60 focus:to-black/40 transition-all duration-200" 
                       placeholder="Tu nombre" 
                     />
                   </label>
@@ -74,7 +74,7 @@ function Contact() {
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full rounded-xl border border-white/10 bg-black/40 px-4 py-3 text-sm text-white/85 outline-none placeholder:text-white/30 focus:border-white/25 focus:bg-black/60 transition-colors duration-200" 
+                      className="w-full rounded-xl border border-white/10 bg-gradient-to-r from-black/40 to-black/20 px-4 py-3 text-sm text-white/85 outline-none placeholder:text-white/30 focus:border-white/25 focus:from-black/60 focus:to-black/40 transition-all duration-200" 
                       placeholder="tucorreo@..." 
                     />
                   </label>
@@ -86,13 +86,13 @@ function Contact() {
                     value={formData.message}
                     onChange={handleChange}
                     rows={4} 
-                    className="w-full rounded-xl border border-white/10 bg-black/40 px-4 py-3 text-sm text-white/85 outline-none placeholder:text-white/30 focus:border-white/25 focus:bg-black/60 transition-colors duration-200 resize-none" 
+                    className="w-full rounded-xl border border-white/10 bg-gradient-to-r from-black/40 to-black/20 px-4 py-3 text-sm text-white/85 outline-none placeholder:text-white/30 focus:border-white/25 focus:from-black/60 focus:to-black/40 transition-all duration-200 resize-none" 
                     placeholder="¿Qué quieres construir? ¿Cuál es tu objetivo?" 
                   />
                 </label>
                 <button 
                   type="submit"
-                  className="rounded-2xl bg-white px-5 py-3 text-sm font-semibold text-black hover:bg-white/90 transition-all duration-200 shadow-lg hover:shadow-xl"
+                  className="gradient-button rounded-2xl px-5 py-3 text-sm font-semibold text-black hover:shadow-lg hover:shadow-white/20 transition-all duration-200"
                 >
                   Enviar mensaje
                 </button>

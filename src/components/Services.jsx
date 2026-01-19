@@ -10,7 +10,7 @@ function Services({ services }) {
           <div className="mb-3 text-xs font-semibold tracking-widest text-white/60">
             SERVICIOS PARTICULARES
           </div>
-          <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
+          <h2 className="gradient-text text-3xl font-semibold tracking-tight md:text-4xl">
             Soluciones puntuales, ejecutables y de alta calidad
           </h2>
           <p className="mt-4 text-base leading-relaxed text-white/70 md:text-lg">
