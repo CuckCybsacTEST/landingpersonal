@@ -21,9 +21,9 @@ function Services({ services }) {
         <div className="mt-10 grid gap-5 md:grid-cols-3">
           {services.map((s) => (
             <Card key={s.title}>
-              <div className="h-28 rounded-xl border border-white/10 bg-white/5" />
-              <div className="mt-4 text-base font-semibold">{s.title}</div>
-              <p className="mt-2 text-sm leading-relaxed text-white/70">{s.body}</p>
+              <div className="text-5xl text-center mb-4">{s.icon}</div>
+              <div className="text-base font-semibold text-center">{s.title}</div>
+              <p className="mt-2 text-sm leading-relaxed text-white/70 text-center">{s.body}</p>
             </Card>
           ))}
         </div>

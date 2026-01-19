@@ -21,8 +21,22 @@ function Solutions({ solutions }) {
         <div className="mt-10 grid gap-5 md:grid-cols-2">
           {solutions.map((s) => (
             <Card key={s.title}>
-              <div className="text-xl font-semibold">{s.title}</div>
-              <p className="mt-3 text-sm leading-relaxed text-white/70">{s.body}</p>
+              <div className="flex items-start gap-4">
+                <div className="text-4xl flex-shrink-0">{s.icon}</div>
+                <div className="flex-1">
+                  <div className="text-xl font-semibold">{s.title}</div>
+                  <p className="mt-3 text-sm leading-relaxed text-white/70">{s.body}</p>
+                  {s.tech && (
+                    <div className="mt-4 flex flex-wrap gap-2">
+                      {s.tech.split(", ").map((tech) => (
+                        <span key={tech} className="inline-block px-2 py-1 text-xs bg-white/10 text-white/60 rounded-lg">
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </div>
             </Card>
           ))}
         </div>

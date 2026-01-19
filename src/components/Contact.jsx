@@ -1,8 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import Section from "./Section";
 import Card from "./Card";
 
 function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: ""
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Form submitted:", formData);
+    // TODO: Implement form submission to backend
+    setFormData({ name: "", email: "", message: "" });
+  };
+
   return (
     <Section id="contacto">
       <div className="mx-auto max-w-6xl px-4 py-16 md:px-6">
@@ -18,16 +38,16 @@ function Contact() {
         <div className="mt-10 grid gap-5 md:grid-cols-12">
           <div className="md:col-span-5">
             <Card>
-              <div className="text-base font-semibold">Acción rápida</div>
+              <div className="text-base font-semibold">🚀 Acción rápida</div>
               <p className="mt-2 text-sm text-white/70">
-                Puedo atenderte por WhatsApp o agendar una llamada.
+                Respondo en máximo 24 horas. Elige tu canal favorito.
               </p>
-              <div className="mt-5 flex flex-wrap gap-3">
-                <button className="rounded-2xl bg-white px-5 py-3 text-sm font-semibold text-black hover:bg-white/90">
-                  Agendar una llamada
-                </button>
-                <button className="rounded-2xl border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold hover:bg-white/10">
-                  Escribirme por WhatsApp
+              <div className="mt-5 flex flex-col gap-2">
+                <a href="https://wa.me/1234567890" className="rounded-2xl bg-green-500 px-5 py-3 text-sm font-semibold text-white hover:bg-green-600 transition-colors duration-200 text-center">
+                  💬 WhatsApp
+                </a>
+                <button className="rounded-2xl border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold hover:bg-white/10 transition-colors duration-200">
+                  📅 Agendar Llamada
                 </button>
               </div>
             </Card>
@@ -35,23 +55,46 @@ function Contact() {
 
           <div className="md:col-span-7">
             <Card>
-              <form className="grid gap-4">
+              <form onSubmit={handleSubmit} className="grid gap-4">
                 <div className="grid gap-4 md:grid-cols-2">
                   <label className="grid gap-2">
                     <span className="text-xs font-semibold text-white/70">Nombre</span>
-                    <input className="w-full rounded-xl border border-white/10 bg-black/40 px-4 py-3 text-sm text-white/85 outline-none placeholder:text-white/30 focus:border-white/25" placeholder="Tu nombre" />
+                    <input 
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      className="w-full rounded-xl border border-white/10 bg-black/40 px-4 py-3 text-sm text-white/85 outline-none placeholder:text-white/30 focus:border-white/25 focus:bg-black/60 transition-colors duration-200" 
+                      placeholder="Tu nombre" 
+                    />
                   </label>
                   <label className="grid gap-2">
                     <span className="text-xs font-semibold text-white/70">Email</span>
-                    <input type="email" className="w-full rounded-xl border border-white/10 bg-black/40 px-4 py-3 text-sm text-white/85 outline-none placeholder:text-white/30 focus:border-white/25" placeholder="tucorreo@..." />
+                    <input 
+                      type="email" 
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      className="w-full rounded-xl border border-white/10 bg-black/40 px-4 py-3 text-sm text-white/85 outline-none placeholder:text-white/30 focus:border-white/25 focus:bg-black/60 transition-colors duration-200" 
+                      placeholder="tucorreo@..." 
+                    />
                   </label>
                 </div>
                 <label className="grid gap-2">
-                  <span className="text-xs font-semibold text-white/70">Mensaje</span>
-                  <textarea rows={5} className="w-full rounded-xl border border-white/10 bg-black/40 px-4 py-3 text-sm text-white/85 outline-none placeholder:text-white/30 focus:border-white/25" placeholder="Cuéntame qué quieres construir y el objetivo…" />
+                  <span className="text-xs font-semibold text-white/70">Cuéntame tu proyecto</span>
+                  <textarea 
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    rows={4} 
+                    className="w-full rounded-xl border border-white/10 bg-black/40 px-4 py-3 text-sm text-white/85 outline-none placeholder:text-white/30 focus:border-white/25 focus:bg-black/60 transition-colors duration-200 resize-none" 
+                    placeholder="¿Qué quieres construir? ¿Cuál es tu objetivo?" 
+                  />
                 </label>
-                <button className="rounded-2xl bg-white px-5 py-3 text-sm font-semibold text-black hover:bg-white/90">
-                  Enviar
+                <button 
+                  type="submit"
+                  className="rounded-2xl bg-white px-5 py-3 text-sm font-semibold text-black hover:bg-white/90 transition-all duration-200 shadow-lg hover:shadow-xl"
+                >
+                  Enviar mensaje
                 </button>
               </form>
             </Card>

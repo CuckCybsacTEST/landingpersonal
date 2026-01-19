@@ -21,6 +21,7 @@ function MethodCards({ methodCards }) {
         <div className="mt-10 grid gap-5 md:grid-cols-4">
           {methodCards.map((c) => (
             <Card key={c.title}>
+              <div className="text-4xl mb-3">{c.icon}</div>
               <div className="text-base font-semibold">{c.title}</div>
               <p className="mt-2 text-sm leading-relaxed text-white/70">{c.body}</p>
             </Card>
