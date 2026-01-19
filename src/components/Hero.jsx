@@ -1,63 +1,69 @@
 import React from "react";
-import Pill from "./Pill";
-import MockImage from "./MockImage";
+import DashboardMock from "./DashboardMock";
+import FeatureGrid from "./FeatureGrid";
 
 function Hero() {
   return (
     <section className="relative overflow-hidden">
-      <div className="pointer-events-none absolute inset-0 opacity-60">
-        <div className="absolute -top-56 left-1/2 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-gradient-to-b from-white/15 to-white/5 blur-3xl" />
-        <div className="absolute -bottom-56 right-0 h-[520px] w-[520px] rounded-full bg-gradient-to-t from-white/10 to-transparent blur-3xl" />
-        <div className="absolute top-1/3 -left-40 h-[400px] w-[400px] rounded-full bg-gradient-to-r from-white/5 to-transparent blur-3xl" />
+      {/* Background effects */}
+      <div className="pointer-events-none absolute inset-0 opacity-40">
+        <div className="absolute top-0 left-1/4 h-96 w-96 bg-white/5 rounded-full blur-3xl" />
+        <div className="absolute -bottom-20 right-1/4 h-96 w-96 bg-white/5 rounded-full blur-3xl" />
       </div>
 
-      <div className="mx-auto max-w-6xl px-4 py-14 md:px-6 md:py-20">
-        <div className="grid gap-10 md:grid-cols-12 md:items-center">
-          <div className="md:col-span-7">
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/10 gradient-card px-3 py-1 text-xs text-white/70">
-              <span className="h-1.5 w-1.5 rounded-full bg-white/70" />
-              Todo conectado. Todo medible. Todo orientado a rentabilidad.
-            </div>
-
-            <h1 className="mt-5 text-4xl font-semibold tracking-tight md:text-6xl gradient-text">
-              Arquitectura digital para construir negocios que funcionan solos, contigo al frente.
-            </h1>
-            <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/70 md:text-lg">
-              Soy Deivis Contreras. Acompaño a negocios y marcas a diseñar marcas, contenido, experiencias digitales y sistemas escalables que convergen en una solución global automatizada. Integro branding, marketing y software para generar cultura, optimización y crecimiento sostenible.
-            </p>
-
-            <div className="mt-7 flex flex-wrap items-center gap-3">
-              <a
-                href="#contacto"
-                className="gradient-button rounded-2xl px-5 py-3 text-sm font-semibold text-black hover:shadow-lg hover:shadow-white/20 transition-all duration-200"
-              >
-                Agendar una llamada
-              </a>
-              <a
-                href="#contacto"
-                className="gradient-button-secondary rounded-2xl border border-white/15 px-5 py-3 text-sm font-semibold text-white transition-all duration-200"
-              >
-                Solicitar propuesta
-              </a>
-            </div>
-
-            <div className="mt-8 flex flex-wrap gap-2">
-              {[
-                "Branding",
-                "Storytelling",
-                "Social Media",
-                "Web",
-                "Sistemas & Apps",
-                "Automatización",
-              ].map((x) => (
-                <Pill key={x}>{x}</Pill>
-              ))}
-            </div>
+      <div className="mx-auto max-w-7xl px-4 py-12 md:px-6 md:py-20">
+        {/* Top Section: Tagline + CTA */}
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs text-white/70 mb-6">
+            <span className="h-1.5 w-1.5 rounded-full bg-white/70" />
+            Converge branding, marketing y software
           </div>
 
-          <div className="md:col-span-5">
-            <MockImage label="Mockup del sitio" />
+          <h1 className="mt-6 text-5xl md:text-7xl font-bold tracking-tight text-white max-w-4xl mx-auto leading-tight">
+            Tu negocio, automatizado
+          </h1>
+
+          <p className="mt-6 text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
+            Arquitectura digital completa que converge en una solución orientada a rentabilidad. Branding, marketing y desarrollo sincronizados en un solo sistema escalable.
+          </p>
+
+          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="#contacto"
+              className="rounded-2xl bg-white px-7 py-3 text-sm font-semibold text-black hover:bg-white/90 transition-all"
+            >
+              Agendar una llamada
+            </a>
+            <a
+              href="#contacto"
+              className="rounded-2xl border border-white/15 bg-white/5 px-7 py-3 text-sm font-semibold text-white hover:bg-white/10 transition-all"
+            >
+              Ver casos de estudio
+            </a>
           </div>
+        </div>
+
+        {/* Dashboard/App Mockup - CENTRAL */}
+        <div className="mb-20">
+          <DashboardMock />
+        </div>
+
+        {/* Features Grid - Bottom */}
+        <div className="mt-20">
+          <div className="text-center mb-12">
+            <p className="text-white/60 text-sm font-semibold tracking-wide mb-3">MÓDULOS INTEGRADOS</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-white">
+              Todo en un sistema
+            </h2>
+          </div>
+          <FeatureGrid />
+        </div>
+
+        {/* Bottom info */}
+        <div className="mt-20 text-center">
+          <p className="text-white/50 text-sm">
+            Soy Deivis Contreras. Acompaño a negocios a diseñar sistemas digitales escalables que funcionan solos.
+          </p>
         </div>
       </div>
     </section>

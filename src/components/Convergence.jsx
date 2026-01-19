@@ -1,29 +1,53 @@
-import React from "react";
+﻿import React from "react";
 import Section from "./Section";
 
 function Convergence() {
+  const steps = [
+    { title: "Tu Marca", desc: "Identidad que comunica", icon: "🎨" },
+    { title: "Tu Contenido", desc: "Narrativa que atrae", icon: "📝" },
+    { title: "Tu Web", desc: "Experiencia que convierte", icon: "🌐" },
+    { title: "Tu Sistema", desc: "Automatización que escala", icon: "⚡" }
+  ];
+
   return (
     <Section id="convergencia">
-      <div className="mx-auto max-w-6xl px-4 py-16 md:px-6">
-        <div className="mx-auto max-w-3xl text-center">
-          <div className="mb-3 text-xs font-semibold tracking-widest text-white/60">
-            UNA SOLUCIÓN GLOBAL AUTOMATIZADA
+      <div className="mx-auto max-w-7xl px-4 py-20 md:px-6">
+        <div className="mx-auto max-w-3xl text-center mb-16">
+          <div className="mb-3 text-xs font-semibold tracking-widest text-white/60 uppercase">
+            Solución Global Automatizada
           </div>
-          <h2 className="gradient-text text-3xl font-semibold tracking-tight md:text-4xl">
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white mb-4">
             Todo converge en un ecosistema
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-white/70 md:text-lg">
+          <p className="text-lg text-white/70">
             Tu marca comunica, tu contenido atrae, tu web convierte y tu sistema optimiza.
           </p>
         </div>
 
-        <div className="mt-10 rounded-2xl border border-white/10 gradient-card p-6">
-          <div className="grid gap-4 md:grid-cols-4">
-            {["Tu Marca", "Tu Contenido", "Tu Web", "Tu Sistema"].map((x) => (
-              <div key={x} className="rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-transparent p-4 hover:border-white/20 hover:from-white/10 transition-all duration-300">
-                <div className="text-sm font-semibold">{x}</div>
-                <div className="mt-3 h-2 w-full rounded bg-gradient-to-r from-white/10 to-white/5" />
-                <div className="mt-2 h-2 w-5/6 rounded bg-gradient-to-r from-white/5 to-transparent" />
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-12">
+          {steps.map((step, idx) => (
+            <div
+              key={step.title}
+              className="group rounded-2xl border border-white/10 bg-gradient-to-br from-white/8 to-white/3 backdrop-blur p-6 hover:border-white/20 hover:bg-white/10 transition-all duration-300 text-center"
+            >
+              <div className="text-4xl mb-4 group-hover:scale-125 transition-transform">{step.icon}</div>
+              <div className="text-sm text-white/60 mb-1">Paso {idx + 1}</div>
+              <h3 className="text-lg font-semibold text-white mb-2">{step.title}</h3>
+              <p className="text-xs text-white/70">{step.desc}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="rounded-2xl border border-white/10 bg-gradient-to-br from-white/8 to-white/3 backdrop-blur p-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              { label: "Integración", desc: "Todo conectado en un sistema único" },
+              { label: "Medición", desc: "Cada métrica orientada a resultados" },
+              { label: "Escalabilidad", desc: "Crece sin perder eficiencia" }
+            ].map((benefit) => (
+              <div key={benefit.label} className="text-center">
+                <div className="text-2xl font-bold text-white mb-2">{benefit.label}</div>
+                <p className="text-sm text-white/70">{benefit.desc}</p>
               </div>
             ))}
           </div>
