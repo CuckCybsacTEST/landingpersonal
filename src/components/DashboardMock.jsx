@@ -1,11 +1,15 @@
+import { useGradient } from "../hooks/useGradient";
+
 function DashboardMock() {
+  const gradient = useGradient();
+
   return (
     <div className="relative">
       {/* Glow background */}
       <div className="absolute inset-0 bg-gradient-to-tr from-white/5 via-transparent to-white/10 blur-2xl" />
       
       {/* Main Dashboard Card */}
-      <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-white/8 to-white/3 shadow-2xl shadow-white/10 backdrop-blur-sm">
+      <div className={`relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br ${gradient} shadow-2xl shadow-white/10 backdrop-blur-sm`}>
         {/* Top Bar */}
         <div className="flex items-center justify-between border-b border-white/10 px-6 py-4">
           <div className="flex items-center gap-2">
@@ -55,7 +59,7 @@ function DashboardMock() {
           {/* Modules Grid */}
           <div className="grid grid-cols-2 gap-4">
             {/* Module 1: Branding */}
-            <div className="rounded-2xl border border-white/10 bg-gradient-to-br from-white/8 to-white/3 backdrop-blur p-5 hover:border-white/20 transition-all cursor-pointer">
+            <div className={`rounded-2xl border border-white/10 bg-gradient-to-br ${gradient} backdrop-blur p-5 hover:border-white/20 transition-all cursor-pointer`}>
               <div className="flex items-start justify-between mb-3">
                 <div>
                   <div className="text-xs text-white/60 font-semibold mb-1">MÓDULO</div>
@@ -67,7 +71,7 @@ function DashboardMock() {
             </div>
 
             {/* Module 2: Automatización */}
-            <div className="rounded-2xl border border-white/10 bg-gradient-to-br from-white/8 to-white/3 backdrop-blur p-5 hover:border-white/20 transition-all cursor-pointer">
+            <div className={`rounded-2xl border border-white/10 bg-gradient-to-br ${gradient} backdrop-blur p-5 hover:border-white/20 transition-all cursor-pointer`}>
               <div className="flex items-start justify-between mb-3">
                 <div>
                   <div className="text-xs text-white/60 font-semibold mb-1">MÓDULO</div>
@@ -79,7 +83,7 @@ function DashboardMock() {
             </div>
 
             {/* Module 3: Marketing */}
-            <div className="rounded-2xl border border-white/10 bg-gradient-to-br from-white/8 to-white/3 backdrop-blur p-5 hover:border-white/20 transition-all cursor-pointer">
+            <div className={`rounded-2xl border border-white/10 bg-gradient-to-br ${gradient} backdrop-blur p-5 hover:border-white/20 transition-all cursor-pointer`}>
               <div className="flex items-start justify-between mb-3">
                 <div>
                   <div className="text-xs text-white/60 font-semibold mb-1">MÓDULO</div>
@@ -91,7 +95,7 @@ function DashboardMock() {
             </div>
 
             {/* Module 4: Desarrollo */}
-            <div className="rounded-2xl border border-white/10 bg-gradient-to-br from-white/8 to-white/3 backdrop-blur p-5 hover:border-white/20 transition-all cursor-pointer">
+            <div className={`rounded-2xl border border-white/10 bg-gradient-to-br ${gradient} backdrop-blur p-5 hover:border-white/20 transition-all cursor-pointer`}>
               <div className="flex items-start justify-between mb-3">
                 <div>
                   <div className="text-xs text-white/60 font-semibold mb-1">MÓDULO</div>

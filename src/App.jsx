@@ -6,6 +6,7 @@ import Solutions from "./components/Solutions";
 import Services from "./components/Services";
 import Convergence from "./components/Convergence";
 import Contact from "./components/Contact";
+import GradientSelector from "./components/GradientSelector";
 import { nav, methodCards, solutions, services } from "./data/data";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Convergence />
         <Contact />
       </main>
+      <GradientSelector />
     </div>
   );
 }

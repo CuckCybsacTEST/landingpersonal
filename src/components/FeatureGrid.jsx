@@ -1,4 +1,8 @@
+import { useGradient } from "../hooks/useGradient";
+
 function FeatureGrid() {
+  const gradient = useGradient();
+
   const features = [
     {
       icon: "🎨",
@@ -27,7 +31,7 @@ function FeatureGrid() {
       {features.map((feature, idx) => (
         <div
           key={idx}
-          className="group rounded-2xl border border-white/10 bg-gradient-to-br from-white/8 to-white/3 p-6 hover:border-white/20 hover:bg-white/10 transition-all duration-300"
+          className={`group rounded-2xl border border-white/10 bg-gradient-to-br ${gradient} p-6 hover:border-white/20 hover:bg-white/10 transition-all duration-300`}
         >
           <div className="text-3xl mb-3 group-hover:scale-110 transition-transform">{feature.icon}</div>
           <h3 className="font-semibold text-white mb-2 text-sm">{feature.title}</h3>
