@@ -2,6 +2,7 @@ import React from "react";
 import Nav from "./components/Nav";
 import Hero from "./components/Hero";
 import Experience from "./components/Experience";
+import Skills from "./components/Skills";
 import MethodCards from "./components/MethodCards";
 import Solutions from "./components/Solutions";
 import Services from "./components/Services";
@@ -17,6 +18,7 @@ function App() {
       <main className="pt-24">
         <Hero />
         <Experience />
+        <Skills />
         <MethodCards methodCards={methodCards} />
         <Solutions solutions={solutions} />
         <Services services={services} />

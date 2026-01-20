@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Section from "./Section";
 
 function Experience() {
@@ -33,18 +33,22 @@ function Experience() {
     }
   ];
 
-  const skills = [
-    { category: "Product Strategy", items: ["Go-to-market", "User Research", "Monetization", "Growth Hacking"] },
-    { category: "Development", items: ["React", "Node.js", "System Design", "Scalability"] },
-    { category: "Leadership", items: ["Team Building", "Stakeholder Management", "Agile", "Mentoring"] },
-    { category: "Markets", items: ["LatAm", "Europa", "Asia", "B2B & B2C"] }
-  ];
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % experiences.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [experiences.length]);
+
+  const currentExperience = experiences[current];
 
   return (
     <Section id="experiencia">
-      <div className="mx-auto max-w-7xl px-4 py-20 md:px-6">
+      <div className="mx-auto max-w-7xl px-4 py-10 md:py-20 md:px-6">
         {/* Header */}
-        <div className="mx-auto max-w-3xl text-center mb-16">
+        <div className="hidden md:block mx-auto max-w-3xl text-center mb-16">
           <div className="mb-3 text-xs font-semibold tracking-widest text-white/60 uppercase">
             Más de una década en mercados de alto nivel
           </div>
@@ -58,11 +62,38 @@ function Experience() {
 
         {/* Timeline - Experiences */}
         <div className="mb-20">
-          <div className="space-y-6">
+          <div className="md:hidden">
+            <div key={current}>
+              <div
+                className="group relative rounded-2xl border border-white/10 bg-gradient-to-br from-white/8 to-white/3 p-8 hover:border-white/20 hover:bg-white/10 transition-all duration-300 backdrop-blur"
+              >
+                {/* Timeline dot - hidden on mobile */}
+                <div className="absolute -left-8 top-8 hidden md:flex">
+                  <div className="h-4 w-4 rounded-full border-2 border-white/40 bg-black" />
+                </div>
+
+                <div className="grid md:grid-cols-3 gap-4 md:gap-8">
+                  <div>
+                    <div className="text-2xl font-bold text-white mb-1">{currentExperience.company}</div>
+                    <div className="text-sm text-white/60 mb-3">{currentExperience.role}</div>
+                    <div className="text-xs font-semibold text-white/50">{currentExperience.years}</div>
+                  </div>
+
+                  <div className="md:col-span-2">
+                    <p className="text-base text-white/80 mb-4 leading-relaxed">{currentExperience.description}</p>
+                    <div className="inline-block rounded-full border border-white/20 bg-white/5 px-4 py-2">
+                      <span className="text-xs font-semibold text-white/70">📈 {currentExperience.highlight}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="hidden md:flex md:flex-col md:space-y-6">
             {experiences.map((exp, idx) => (
               <div
                 key={exp.company}
-                className="group relative rounded-2xl border border-white/10 bg-gradient-to-br from-white/8 to-white/3 p-8 hover:border-white/20 hover:bg-white/10 transition-all duration-300 backdrop-blur"
+                className="group relative rounded-2xl border border-white/10 bg-gradient-to-br from-white/8 to-white/3 p-8 hover:border-white/20 hover:bg-white/10 transition-all duration-300 backdrop-blur w-auto"
               >
                 {/* Timeline dot */}
                 <div className="absolute -left-8 top-8 hidden md:flex">
@@ -89,41 +120,6 @@ function Experience() {
               </div>
             ))}
           </div>
-        </div>
-
-        {/* Skills Grid */}
-        <div className="bg-gradient-to-br from-white/8 to-white/3 rounded-2xl border border-white/10 p-8 md:p-12 backdrop-blur">
-          <h3 className="text-2xl font-bold text-white mb-12 text-center">Habilidades desarrolladas</h3>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {skills.map((skillGroup) => (
-              <div key={skillGroup.category} className="text-center">
-                <h4 className="text-sm font-semibold text-white/60 mb-4 uppercase tracking-wide">
-                  {skillGroup.category}
-                </h4>
-                <div className="space-y-2">
-                  {skillGroup.items.map((skill) => (
-                    <div key={skill} className="text-sm text-white/80">
-                      ✓ {skill}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* CTA */}
-        <div className="mt-16 text-center">
-          <p className="text-white/70 mb-6">
-            Mi background combinado con especialización en arquitectura digital, me permite diseñar sistemas que no solo funcionan, sino que escalan.
-          </p>
-          <a
-            href="#contacto"
-            className="inline-block rounded-2xl bg-white px-7 py-3 text-sm font-semibold text-black hover:bg-white/90 transition-all"
-          >
-            Hablemos de tu proyecto
-          </a>
         </div>
       </div>
     </Section>

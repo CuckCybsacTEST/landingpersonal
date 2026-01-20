@@ -17,12 +17,15 @@ function MethodCards({ methodCards }) {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {methodCards.map((c, idx) => (
             <div
               key={c.title}
-              className="group relative rounded-2xl border border-white/10 bg-gradient-to-br from-white/8 to-white/3 backdrop-blur p-6 hover:border-white/20 hover:bg-white/10 transition-all duration-300"
+              className="group relative rounded-2xl border border-white/10 bg-gradient-to-br from-white/8 to-white/3 backdrop-blur p-6 hover:border-white/20 hover:bg-white/10 transition-all duration-300 overflow-hidden group-hover:shadow-xl group-hover:shadow-white/20"
             >
+              {/* Shine effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-300 ease-out blur-sm"></div>
+
               <div className="absolute top-4 right-4 w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center text-white/60 text-sm font-bold group-hover:bg-white/20 transition-all">
                 {idx + 1}
               </div>
