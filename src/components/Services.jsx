@@ -7,13 +7,13 @@ function Services({ services }) {
       <div className="mx-auto max-w-7xl px-4 py-20 md:px-6">
         <div className="mx-auto max-w-3xl text-center mb-16">
           <div className="mb-3 text-xs font-semibold tracking-widest text-white/60 uppercase">
-            Servicios Particulares
+            Operativa On-Demand
           </div>
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white mb-4">
-            Soluciones puntuales, ejecutables y premium
+            Servicios Puntuales y Transaccionales
           </h2>
           <p className="text-lg text-white/70">
-            Si necesitas resolver algo puntual, trabajo contigo servicios individuales sin perder el estándar premium.
+            Soluciones inmediatas para necesidades específicas dentro del ecosistema CYBSAC. Ejecución premium y directa.
           </p>
         </div>
 
@@ -29,7 +29,7 @@ function Services({ services }) {
               <h3 className="text-xl font-semibold text-center text-white mb-3">{s.title}</h3>
               <p className="text-sm leading-relaxed text-white/70 text-center flex-1">{s.body}</p>
               <div className="mt-6 pt-4 border-t border-white/10 group-hover:border-white/20 transition-colors">
-                <button className="text-xs text-white/60 hover:text-white transition-colors">Saber mas →</button>
+                <button className="text-xs text-white/60 hover:text-white transition-colors">Solicitar Servicio →</button>
               </div>
             </div>
           ))}

@@ -3,16 +3,16 @@ import Section from "./Section";
 
 function Skills() {
   const skills = [
-    { name: "React", level: 9 },
-    { name: "Node.js", level: 8 },
-    { name: "Product Strategy", level: 9 },
-    { name: "Growth Hacking", level: 8 },
-    { name: "Scalability", level: 9 },
-    { name: "System Design", level: 8 },
-    { name: "User Research", level: 7 },
-    { name: "Monetization", level: 8 },
-    { name: "Leadership", level: 9 },
-    { name: "Agile", level: 8 }
+    { name: "Operación B2B", level: 9 },
+    { name: "Alta Demanda", level: 9 },
+    { name: "Infraestructura", level: 8 },
+    { name: "Estrategia Monetaria", level: 9 },
+    { name: "Escalabilidad", level: 9 },
+    { name: "Medición Crítica", level: 8 },
+    { name: "Cultura Digital", level: 9 },
+    { name: "Control Multisede", level: 8 },
+    { name: "Partner Strategy", level: 9 },
+    { name: "Rentabilidad", level: 10 }
   ];
 
   const [current, setCurrent] = useState(0);

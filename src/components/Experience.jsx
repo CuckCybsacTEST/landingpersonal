@@ -4,32 +4,32 @@ import Section from "./Section";
 function Experience() {
   const experiences = [
     {
-      company: "Stripe",
-      role: "Product Developer",
-      years: "2019-2022",
-      description: "Arquitectura de soluciones de pago global. Desarrollo de APIs de alto rendimiento y experiencias de integración para miles de comercios.",
-      highlight: "+500K merchants"
+      company: "Eventos & Hospitality",
+      role: "Sistemas de Alta Demanda",
+      years: "Acompañamiento",
+      description: "Implementación de infraestructura crítica para eventos masivos y gestión de hospitalidad. Optimización de flujos de reserva y operación en tiempo real.",
+      highlight: "+50 eventos operativos"
     },
     {
-      company: "Mercado Libre",
-      role: "Senior Product Engineer",
-      years: "2017-2019",
-      description: "Lead técnico en iniciativas de marketplace. Optimización de conversión y escalabilidad de plataformas de transacción.",
-      highlight: "+10M usuarios"
+      company: "Nightclubs & Entertainment",
+      role: "Operativa Digital",
+      years: "Control Real",
+      description: "Sistemas de control de acceso, venta anticipada y monetización de audiencias para discotecas de alto nivel en Latinoamérica.",
+      highlight: "+1M tickets procesados"
     },
     {
-      company: "Wallapop",
-      role: "Product Developer",
-      years: "2015-2017",
-      description: "Desarrollo de features core en mobile y web. Growth engineering y monetización. Experiencia en mercados latino y europeo.",
-      highlight: "+5M descargas"
+      company: "Marcas Multisede",
+      role: "Ciudadanía Digital",
+      years: "Estructura B2B",
+      description: "Estandarización de procesos digitales para franquicias y marcas con múltiples puntos de venta físicos. Control centralizado y datos unificados.",
+      highlight: "Escalabilidad regional"
     },
     {
-      company: "Startups & Freelance",
-      role: "Founder & Technical Leader",
-      years: "2013-2015",
-      description: "Fundación y escalada de 3 startups. Desarrollo full-stack, product strategy y fundraising. Experiencia validando modelos de negocio.",
-      highlight: "3 ventures"
+      company: "Consultoría de Monetización",
+      role: "Estrategia de Rentabilidad",
+      years: "Alto Ticket",
+      description: "Profesionalización de activos digitales y audiencias, convirtiendo el contenido en unidades de negocio de alto rendimiento.",
+      highlight: "ROI comprobado"
     }
   ];
 
@@ -50,13 +50,13 @@ function Experience() {
         {/* Header */}
         <div className="hidden md:block mx-auto max-w-3xl text-center mb-16">
           <div className="mb-3 text-xs font-semibold tracking-widest text-white/60 uppercase">
-            Más de una década en mercados de alto nivel
+            Experiencia en entornos de alta presión
           </div>
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white mb-4">
-            Mi experiencia como Product Developer
+            Probado en escenarios reales
           </h2>
           <p className="text-lg text-white/70">
-            He acompañado el crecimiento de algunas de las plataformas más grandes de Latinoamérica y el mundo. Desde early stage hasta scale-up de millones de usuarios.
+            Acompañamos el crecimiento de negocios con tracción sustancial, garantizando que la tecnología sea el motor y no un cuello de botella.
           </p>
         </div>
 

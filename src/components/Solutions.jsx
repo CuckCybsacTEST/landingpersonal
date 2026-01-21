@@ -3,17 +3,17 @@ import Section from "./Section";
 
 function Solutions({ solutions }) {
   return (
-    <Section id="soluciones">
+    <Section id="pilares">
       <div className="mx-auto max-w-7xl px-4 py-20 md:px-6">
         <div className="mx-auto max-w-3xl text-center mb-16">
           <div className="mb-3 text-xs font-semibold tracking-widest text-white/60 uppercase">
-            Soluciones Integradas
+            Pilares Estratégicos
           </div>
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white mb-4">
-            Arquitecturas listas para crecer
+            Acompañamiento B2B de Alto Nivel
           </h2>
           <p className="text-lg text-white/70">
-            Distintos tipos de negocio, un mismo principio: integración, medición y escalabilidad.
+            No vendemos servicios sueltos. Diseñamos y operamos el ecosistema digital de negocios que requieren control real y alta rentabilidad.
           </p>
         </div>
 
@@ -34,11 +34,11 @@ function Solutions({ solutions }) {
 
         <div className="rounded-2xl border border-white/10 bg-gradient-to-br from-white/8 to-white/3 backdrop-blur p-8">
           <div className="flex items-start gap-4">
-            <div className="text-2xl">💡</div>
+            <div className="text-2xl">⚡</div>
             <div>
-              <div className="font-semibold text-white mb-2">Nota Importante</div>
+              <div className="font-semibold text-white mb-2">Nota de Posicionamiento</div>
               <p className="text-sm leading-relaxed text-white/70">
-                Cuando trabajo consultoría para plataformas de suscripción, mi enfoque es estratégico y tecnológico: branding, funnels, retención, automatización, analítica y operación.
+                Nuestros programas de acompañamiento están diseñados para negocios con tracción sustancial: discotecas, eventos masivos, hospitality y marcas corporativas. Priorizamos la operatividad real y la Ciudadanía Digital sobre la estética vacía.
               </p>
             </div>
           </div>
